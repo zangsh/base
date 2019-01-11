@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+#      uri: http://localhost:8888
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      bus:
+        enabled: true
+        trace:
+          enabled: true
+      name: configname-test
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: zangsh
+    password: 123456
